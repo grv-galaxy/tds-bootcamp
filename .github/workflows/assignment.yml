@@ -1,0 +1,20 @@
+name: Verify Assignment Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch: # Allows manual triggering from the Actions tab
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 24f1000758@ds.study.iitm.ac.in
+        run: |
+          echo "GitHub Action successfully triggered for IITM assignment."
+          echo "Verification Email: 24f1000758@ds.study.iitm.ac.in"
